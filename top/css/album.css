@@ -1,0 +1,113 @@
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron h1 {
+    font-weight: 600;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }
+
+  h1 {
+    margin-bottom: 0.3rem;
+  }
+
+  h2 {
+      font-weight: 600;
+      margin-bottom: 45px;
+  }
+
+  h3 {
+      font-size: 21px;
+      font-weight: 600;
+      margin-top: 2px;
+  }
+
+  h4  {
+      font-size: 19px;
+      font-weight: 600;
+  }
+
+  h5 {
+        font-size: 16px;
+      font-weight: 400;
+  }
+
+  .price {
+      font-size: 16px;
+      font-weight: 600;
+  }
+
+  .center  {
+      margin: 0 auto;
+  }
+
+  .card-header {
+      font-weight: 600;
+  }
+
+  img {
+      width: 425px;
+  }
+
+  .top-height  {
+    height: 70vh;
+  }
+
+  form {
+      margin-top: 30px;
+  }
+  br:after {
+      margin-right: -.333em;
+      content:””;
+    }
+  .mediaBr {
+      display: none;
+  }
+
+  .row-content {
+      margin-top: 1.2rem;
+  }
+
+  .mb-10 {
+      margin-bottom: 10rem !important;
+  }
+
+  .mb-80 {
+    margin-bottom: 80px !important;
+  }
+
+
+@media (max-width: 575.98px) {  }
+
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+@media (min-width: 768px) and (max-width: 991.98px) { }
+
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+
+@media (min-width: 1200px) {}
