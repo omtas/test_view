@@ -14,6 +14,14 @@
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.textillate.js"></script>
+    <script type="text/javascript" src="../js/jquery.lettering.js"></script>
+    <script type="text/javascript" src="../js/textAnime.js"></script>
+    <script type="text/javascript" src="../js/top.js"></script>
+
+    <link href="../css/animate.css" rel="stylesheet">
+
     <style>
         body {
             font-family: "SF Pro JP", "SF Pro Display", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -107,9 +115,23 @@
 
         <section class="jumbotron text-center">
             <div class="container">
-                <h1>言いづらい。<br class="mediaBr">変えたい。<br>をカタチにする</h1>
-                <p class="lead text-muted">Valeはあなたの退職をサポートします。一人で悩まずその先へ</p>
+
+                <div class="h1-text h1-title-1">言いづらい。変えたい。を</div>
+                <div class="h1-text h1-title-2">カタチにする</div>
+
+                <p class="lead text-muted tetx-in-1">Valeはあなたの退職をサポートします。</p>
+                <p class="lead text-muted tetx-in-2">一人で悩まずその先へ</p>
+
+                <div class="blank-">
+                    <div id="scroll" class="lead text-muted">
+                        <a href="#"><span></span><span></span><span></span></a>
+                        <p class="lead text-muted hop-text">スクロール</p>
+                    </div>
+                </div>
                 <p>
+
+                <!--
+
                 <form>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">お申込みはまずメールアドレスから</label>
@@ -118,6 +140,8 @@
                     </div>
                 </form>
                 <button href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">申込み</button>
+
+                -->
                 </p>
             </div>
         </section>
@@ -319,11 +343,14 @@
                     href="/docs/4.5/getting-started/introduction/">getting started guide</a>.</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
     <script src="../css/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!--
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    -->
 </body>
 
 </html>
