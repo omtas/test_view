@@ -22,7 +22,6 @@ function scroll_control(event) {
     event.preventDefault();
 }
 
-
 // スクロールアイコン表示
 setTimeout("displayScroll()", 11000);
 
