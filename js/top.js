@@ -12,9 +12,9 @@ function no_scroll() {
 // スクロール禁止解除
 function return_scroll() {
     // PCでのスクロール禁止解除
-    document.removeEventListener("mousewheel", scroll_control, { passive: false });
+    document.removeEventListener("mousewheel", scroll_control, { passive: true });
     // スマホでのタッチ操作でのスクロール禁止解除
-    document.removeEventListener('touchmove', scroll_control, { passive: false });
+    document.removeEventListener('touchmove', scroll_control, { passive: true });
 }
 
 // スクロール関連メソッド
@@ -22,13 +22,9 @@ function scroll_control(event) {
     event.preventDefault();
 }
 
-function side_scroll() {
-    document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
-}
 
 // スクロールアイコン表示
 setTimeout("displayScroll()", 11000);
-
 
 setTimeout("side_scroll()", 0);
 setTimeout("no_scroll()", 0);
