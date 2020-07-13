@@ -12,9 +12,9 @@ function no_scroll() {
 // スクロール禁止解除
 function return_scroll() {
     // PCでのスクロール禁止解除
-    document.removeEventListener("mousewheel", scroll_control, { passive: true });
+    document.removeEventListener("mousewheel", scroll_control, { passive: false });
     // スマホでのタッチ操作でのスクロール禁止解除
-    document.removeEventListener('touchmove', scroll_control, { passive: true });
+    document.removeEventListener('touchmove', scroll_control, { passive: false });
 }
 
 // スクロール関連メソッド
