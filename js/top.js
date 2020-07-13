@@ -25,7 +25,8 @@ function scroll_control(event) {
 function side_scroll() {
     document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 }
-  
+
+// スクロールアイコン表示
 setTimeout("displayScroll()", 11000);
 
 
