@@ -30,17 +30,9 @@ setTimeout("displayScroll()", 11000);
 
 
 setTimeout("side_scroll()", 0);
-//setTimeout("no_scroll()", 0);
-//setTimeout("return_scroll()", 11300);
+setTimeout("no_scroll()", 0);
+setTimeout("return_scroll()", 11300);
 
-$(function () {    
-    //ScrollReveal().reveal('.container-title', { duration: '2000', viewFactor: '0.1', scale: '6', delay: '10', distance: '-600px'});
-    //ScrollReveal().reveal('.container-title', { duration: '2000', viewFactor: '0.1', scale:'2.0', delay: '1000', distance: '-200px'});
-    
-    //ScrollReveal().reveal('.item1', { duration: '3000', reset: 'true' });
-    //ScrollReveal().reveal('.item2', { duration: '3000', delay: '500', reset: 'true' });
-    //ScrollReveal().reveal('.item3', { duration: '3000', delay: '1000',  reset: 'true' });
-})
 $(window).on('load resize', function(){
     var w = $(window).width();
     if (370 < w && w < 575.98) {
