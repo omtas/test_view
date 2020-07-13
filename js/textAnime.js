@@ -2,12 +2,12 @@ $(function () {
     $('.h1-title-1').textillate({
       loop: false,  
       minDisplayTime: 3000,  
-      initialDelay: 800,  
+      initialDelay: 500,  
       autoStart: true,  
   
       in: {
         effect: 'fadeIn',  
-        delayScale: 4.0,  
+        delayScale: 3.0,  
         delay: 50,  
         sync: false,  
         shuffle: false
@@ -16,7 +16,7 @@ $(function () {
    $('.h1-title-2').textillate({
       loop: false,  
       minDisplayTime: 3000,  
-      initialDelay: 2500,  
+      initialDelay: 2000,  
       autoStart: true,  
 
       in: {
@@ -28,7 +28,7 @@ $(function () {
       },  
    });
   
-   $('.tetx-in-1').textillate({
+   $('.text-in-1').textillate({
     loop: false,  
     minDisplayTime: 3000,  
     initialDelay: 3500,  
@@ -36,17 +36,17 @@ $(function () {
 
     in: {
       effect: 'fadeIn',  
-      delayScale: 1.0,  
+      delayScale: 0.8,  
       delay: 50,  
       sync: false,  
       shuffle: false
     },  
    });
   
-   $('.tetx-in-2').textillate({
+   $('.text-in-2').textillate({
     loop: false,  
     minDisplayTime: 3000,  
-    initialDelay: 4800,  
+    initialDelay: 4300,  
     autoStart: true,  
 
     in: {

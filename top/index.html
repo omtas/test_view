@@ -20,7 +20,10 @@
     <script type="text/javascript" src="../js/textAnime.js"></script>
     <script type="text/javascript" src="../js/top.js"></script>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/3d.css" rel="stylesheet">
 
     <style>
         body {
@@ -116,11 +119,12 @@
         <section class="jumbotron text-center">
             <div class="container">
 
-                <div class="h1-text h1-title-1">言いづらい。変えたい。を</div>
-                <div class="h1-text h1-title-2">カタチにする</div>
+                <div class="h1-text h1-title-1 sm-top"> 言いづらい。</div>
+                <div class="h1-text h1-title-1"> 変えたい。</div>
+                <div class="h1-text h1-title-2">それをカタチに</div>
 
-                <p class="lead text-muted tetx-in-1">Valeはあなたの退職をサポートします。</p>
-                <p class="lead text-muted tetx-in-2">一人で悩まずその先へ</p>
+                <p class="text-muted text-in-1">Valeはあなたの退職を代行します。</p>
+                <p class="text-muted text-in-2">一人で悩まずその先へ</p>
 
                 <div class="blank-">
                     <div id="scroll" class="lead text-muted">
@@ -130,7 +134,7 @@
                 </div>
                 <p>
 
-                <!--
+                    <!--
 
                 <form>
                     <div class="form-group">
@@ -146,13 +150,13 @@
             </div>
         </section>
 
-        <div class="album py-5 bg-light">
+        <div class="album bg-light">
             <div class="container">
-                <div class="text-center">
-                    <h2>Valeが提供する<br>あなたにぴったりのやめ方を見つけよう。</h2>
+                <div class="text-center animateslow">
+                    <h2 class="text-left">Valeが提供する、<br>あなたにぴったりの<br>やめ方を見つけよう。</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" id="priceCard1">
                         <div class="card mb-4 shadow-sm">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
@@ -169,7 +173,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" id="priceCard2">
                         <div class="card mb-4 shadow-sm">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
@@ -186,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" id="priceCard3">
                         <div class="card mb-4 shadow-sm">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
@@ -207,111 +211,213 @@
             </div>
         </div>
 
-        <div class="jumbotron text-center">
-            <h2 class="mb-80">Valeだからできること。</h2>
+        <div class="jumbotron text-center album">
+            <h2 class="container-title pc" id="container-title-pc">Valeだからできること。</h2>
+            <h2 class="container-title sm" id="container-title-sm">Valeだから<br>できること。</h2>
             <div class="container">
 
-                <h3>我々は知っています。</h3>
-                <div class="row row-content mb-10 reverse-flex">
-                    <div class="col-md-6">
-                        <p class="lead text-muted">これまでとは違う業界や、お客様の個性、性格にあった活躍できる業界や職種をご提案いたします。</p>
-                    </div>
-                    <div class="col-md-6">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-                            role="img" aria-label="Placeholder: Thumbnail">
-                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
-                    </div>
-                </div>
-
-                <h3>シンプルにスピーディーに。</h3>
-                <div class="row row-content mb-10">
-                    <div class="col-md-6">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-                            role="img" aria-label="Placeholder: Thumbnail">
-                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="lead text-muted">退職まで3ステップで完了いたします。</p>
+                <div class="container-contents">
+                    <h3>我々は知っています。</h3>
+                    <div class="row row-content mb-10 reverse-flex">
+                        <div class="col-md-6">
+                            <p class="lead text-muted text-left container-contents-text">
+                                これまでとは違う業界や、お客様の個性、性格にあった活躍できる業界や職種をご提案いたします。</p>
+                        </div>
+                        <div class="col-md-6">
+                            <svg class="bd-placeholder-img card-img-top layer" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">我々は知っている</text>
+                            </svg>
+                        </div>
                     </div>
                 </div>
 
-                <h3>我々は知っています。</h3>
-                <div class="row row-content mb-10 reverse-flex">
-                    <div class="col-md-6">
-                        <p class="lead text-muted">これまでとは違う業界や、お客様の個性、性格にあった活躍できる業界や職種をご提案いたします。</p>
-                    </div>
-                    <div class="col-md-6">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-                            role="img" aria-label="Placeholder: Thumbnail">
-                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
+                <div class="container-contents">
+                    <h3 class="pc">シンプルにスピーディーに。</h3>
+                    <h3 class="sm">シンプルに、<br>スピーディーに。</h3>
+                    <div class="row row-content mb-10">
+                        <div class="col-md-6">
+                            <svg class="bd-placeholder-img card-img-top mb-1 item1" width="100%" height="40"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">相談</text>
+                            </svg>
+                            <svg class="bd-placeholder-img card-img-top mb-1 item1" width="100%" height="40"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">矢印</text>
+                            </svg>
+                            <svg class="bd-placeholder-img card-img-top mb-1 item2" width="100%" height="40"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">振込</text>
+                            </svg>
+                            <svg class="bd-placeholder-img card-img-top mb-1 item2" width="100%" height="40"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">矢印</text>
+                            </svg>
+                            <svg class="bd-placeholder-img card-img-top mb-1 item3" width="100%" height="40"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">実行</text>
+                            </svg>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="lead text-muted text-left container-contents-text">
+                                退職まで3ステップで完了いたします。お客様が納得されてから退職までは最短で翌日で可能。</p>
+                        </div>
                     </div>
                 </div>
 
-                <h3>プライバシー</h3>
-                <div class="row row-content mb-10">
-                    <div class="col-md-6">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-                            role="img" aria-label="Placeholder: Thumbnail">
-                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
+                <div class="container-contents">
+                    <h3>返金保証</h3>
+                    <div class="row row-content mb-10 reverse-flex">
+                        <div class="col-md-6">
+                            <p class="lead text-muted text-left container-contents-text">お客様の退職が成功されなかった場合は費用を全額返金いたします。
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <svg class="bd-placeholder-img card-img-top hop-img" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">返金</text>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <p class="lead text-muted">Valeではプライバシーは基本的人権と考えます。Valeではお客様との契約関係終了後の一定の保存期間を過ぎた場合お客様の情報を削除します。
-                        </p>
+                </div>
+
+                <div class="container-contents">
+                    <h3>24時間。365日。</h3>
+                    <div class="row row-content mb-10">
+                        <div class="col-md-6">
+                            <svg class="bd-placeholder-img card-img-top hop-img" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">24h365d</text>
+                            </svg>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="lead text-muted text-left container-contents-text">Valeはお客様のご要望に沿って対応いたします。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-contents">
+                    <h3>雇用保険</h3>
+                    <div class="row row-content mb-10 reverse-flex">
+                        <div class="col-md-6">
+                            <p class="lead text-muted text-left container-contents-text">
+                                お客様の状況にもよりますが、雇用保険を受け取れるケースがあります。私たちは退職後の保険のサポートもいたします。</p>
+                        </div>
+                        <div class="col-md-6">
+                            <svg class="bd-placeholder-img card-img-top hop-img" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">制度</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-contents">
+                    <h3>プライバシー</h3>
+                    <div class="row row-content mb-10">
+                        <div class="col-md-6">
+                            <svg class="bd-placeholder-img card-img-top hop-img" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">プライバシー</text>
+                            </svg>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="lead text-muted blurred text-left container-contents-text">
+                                Valeではプライバシーは<span>何もなしのメッセージ</span>基本的人権と考えます。お客様との契約関係終了後、<span>何もなし</span>一定の保存期間を過ぎた場合<span>何もなし</span>お客様の情報を削除します。
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="album py-5 bg-light">
+        <div class="jumbotron album bg-light">
             <div class="">
-                <h2 class="text-center">あなたらしく。</h2>
-                <div class="center container-sm">
+                <h2 class="text-center customer-contents">あなたらしく。</h2>
+                <div class="container center container-sm">
+                    <div class="">
+                        <div class="row row-content reverse-flex">
+                            <div class="col-md-6">
+                                <p class="lead text-muted text-left container-contents-text mr-57 customer-contents">
+                                    今までのお客様はなんたらなんたらなんたらなんたらなんたらなんたらなんたらなんたらなんたらなんたらなんたらなんたらなんたらなんたら
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <article class="lead text-muted example-left" id="customerValu1">
+                                    <marquee behavior="scroll" direction="left">
+                                        お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声</marquee>
+                                </article>
+                                <article class="lead text-muted example-left" id="customerValu2">
+                                    <marquee behavior="scroll" direction="left">
+                                        お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声</marquee>
+                                </article>
+                                <article class="lead text-muted example-left" id="customerValu3">
+                                    <marquee behavior="scroll" direction="left">
+                                        お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声</marquee>
+                                </article>
+                                <article class="lead text-muted example-left" id="customerValu4">
+                                    <marquee behavior="scroll" direction="left">
+                                        お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声</marquee>
+                                </article>
+                                <article class="lead text-muted example-left" id="customerValu5">
+                                    <marquee behavior="scroll" direction="left">
+                                        お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声お客様の声</marquee>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
         </div>
-        </div>
-        <div class="jumbotron album py-5">
+        <div class="jumbotron album">
             <div class="container">
-                <div class="text-center">
+                <div class="text-center animateslow">
                     <h2>よくある質問</h2>
                 </div>
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm animateright">
                     <h5 class="card-header">Q 支払い方法は何がありますか？</h5>
                     <div class="card-body">
                         <p class="card-text text-muted">Valeでは現在、銀行振込のみとなっております。</p>
                     </div>
                 </div>
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm animateleft">
                     <h5 class="card-header">Q 即日退職できますか？</h5>
                     <div class="card-body">
                         <p class="card-text text-muted">お客様の状況にもよりますができる場合もございます。</p>
                     </div>
                 </div>
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm animateright">
                     <h5 class="card-header">Q 返金保証はありますか？</h5>
                     <div class="card-body">
                         <p class="card-text text-muted">全てのプランにて返金保証はついております。</p>
                     </div>
                 </div>
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm animateleft">
                     <h5 class="card-header">Q 有給休暇の交渉はできますか？</h5>
                     <div class="card-body">
                         <p class="card-text text-muted">Valeでは退職の意思を代弁を行いますが、交渉などはできかねます。</p>
                     </div>
                 </div>
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm animateright">
                     <h5 class="card-header">Q 返金保証はありますか？</h5>
                     <div class="card-body">
                         <p class="card-text text-muted">全てのプランにて返金保証はついております。</p>
@@ -319,10 +425,10 @@
                 </div>
             </div>
         </div>
-        <div class="album py-5 bg-light">
+        <div class="album bg-light">
             <div class="container text-center">
                 <div class="text-center">
-                    <h2>Valeの取組(CSR)</h2>
+                    <h2>Valeの取組</h2>
                 </div>
                 <p class="lead text-muted">私たちはお客様からいただいた金額の一部を世界の子どもたちへの支援へ寄付させて頂いております。</p>
             </div>
@@ -331,6 +437,14 @@
             <img src="img/kids.jpg" class="rounded" alt="...">
           </div>
         -->
+        </div>
+        <div class="jumbotron album">
+            <div class="container">
+                <div class="text-center">
+                    <h2>お困りの時は</h2>
+                </div>
+
+            </div>
         </div>
     </main>
     <footer class="text-muted jumbotron">

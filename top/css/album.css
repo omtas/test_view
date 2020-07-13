@@ -1,3 +1,14 @@
+html body {
+  overflow-x: hidden;
+}
+
+.album {
+  padding-top: 149px;
+  padding-bottom: 149px;
+}
+.sm {
+  display: none;
+}
 .jumbotron {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -50,24 +61,26 @@
   }
 
   h1 {
+    font-size: 72px;
     margin-bottom: 0.3rem;
   }
 
   .h1-text {
-    margin-bottom: 0.3rem;
+    /* margin-bottom: 0.3rem; */
     font-weight: 600;
-    margin-bottom: 0.3rem;
-    font-size: 2.5rem;
-    margin-top: 3rem;
+    font-size: 80px;
+    letter-spacing: 0.5px;
+    line-height: 82px
   }
 
   .h1-title-2 {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 
   h2 {
       font-weight: 600;
       margin-bottom: 45px;
+      font-size: 64px;
   }
 
   h3 {
@@ -82,8 +95,13 @@
   }
 
   h5 {
-        font-size: 16px;
+      font-size: 16px;
       font-weight: 400;
+  }
+
+  .text-in-1, .text-in-2 {
+    font-size: 28px;
+    margin-bottom: 0px;
   }
 
   #scroll {
@@ -92,7 +110,12 @@
   }
 
   .hop-text {
+    margin-top: 2rem;
     animation: hop .5s ease infinite alternate;
+  }
+
+  .hop-img {
+    animation: hop .7s ease infinite alternate;
   }
   
   @keyframes hop{
@@ -101,11 +124,11 @@
   }
 
   a {
-    padding-top: 80px;
+    padding-top: 95px;
   }
   a span {
     position: absolute;
-    top: 510px;
+    top: 530px;
     left: 50%;
     width: 24px;
     height: 24px;
@@ -124,12 +147,12 @@
     animation-delay: 0s;
   }
   a span:nth-of-type(2) {
-    top: 525px;
+    top: 545px;
     -webkit-animation-delay: .15s;
     animation-delay: .15s;
   }
   a span:nth-of-type(3) {
-    top: 540px;
+    top: 560px;
     -webkit-animation-delay: .3s;
     animation-delay: .3s;
   }
@@ -169,6 +192,13 @@
       font-weight: 600;
   }
 
+  .blurred span {
+    filter: blur(6px);
+    /* As pointed out by Alexander Erlandsson (@alexerlandsson), for situations that require better cross-browser support, the blur effect is easily reproduced with transpartent text + text-shadow
+    color: transparent;
+    text-shadow: 0 0 12px rgba(0,0,0,0.8); */
+  }
+
   img {
       width: 425px;
   }
@@ -192,6 +222,10 @@
       margin-top: 1.2rem;
   }
 
+  .mr-57 {
+    margin-right: 57px;
+  }
+
   .mb-10 {
       margin-bottom: 10rem !important;
   }
@@ -200,14 +234,186 @@
     margin-bottom: 80px !important;
   }
 
+  .mb-400 {
+    margin-bottom: 400px !important;
+  }
+
   .center {
       margin: 0 auto;
   }
 
+  .container-title {
+    margin-bottom: 350px;
+    padding-top: 200px;
+  }
 
-@media (max-width: 575.98px) {  }
+  .container-contents {
+    margin-bottom: 400px;
+    padding-top: 100px;
+  }
 
-@media (min-width: 576px) and (max-width: 767.98px) { }
+  .container-contents h3 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .container-contents-text {
+    font-size: 24px;
+  }
+
+  @media (max-width: 575.98px) {
+    /* タブレット以下のプロパティ */
+    .album {
+      padding-top: 67px;
+      padding-bottom: 67px;
+    }
+
+    .mr-57 {
+      margin-right: 0px;
+      }
+  }
+
+@media (min-width: 370px) and (max-width: 575.98px) { 
+  /* iPhoneX,Pixcelからタブレットのプロパティ */
+  .pc {
+    display: none;
+  }
+
+  .sm {
+    display: block;
+  }
+  .sm-top {
+    margin-top: 80px;
+  }
+  .h1-text {
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    line-height: 47px;
+  }
+  .text-in-1, .text-in-2 {
+    font-size: 19px;
+    margin-bottom: 0px;
+  }
+  a span {
+    top: 430px;
+  }
+  a span:nth-of-type(2) {
+    top: 445px;
+  }
+  a span:nth-of-type(3) {
+    top: 460px;
+  }
+  .blank-  {
+    margin-bottom: 150px;
+  }
+  h2 {
+    font-weight: 600;
+    margin-bottom: 45px;
+    font-size: 33.7px;
+  }
+  .container-contents h3 {
+    font-size: 30px;
+    margin-bottom: 17px;
+  }
+
+  .container-title {
+    margin-bottom: 350px;
+    padding-top: 100px;
+  }
+
+  .container-contents {
+    margin-bottom: 350px;
+    padding-top: 100px;
+  }
+
+  .container-contents-text {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-block-start: 13.6px;
+  }
+  .mr-57 {
+    margin-bottom: 5px;
+    }
+ }
+
+ @media (max-width: 369.98px) {
+
+  /* iPhoneSE以下のプロパティ */
+
+  .pc {
+    display: none;
+  }
+
+  .sm {
+    display: block;
+  }
+  .sm-top {
+    margin-top: 80px;
+  }
+  .h1-text {
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    line-height: 43px;
+  }
+  .text-in-1, .text-in-2 {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .hop-text {
+    font-size: 1rem;
+  }
+  a span {
+    top: 400px;
+  }
+  a span:nth-of-type(2) {
+    top: 415px;
+  }
+  a span:nth-of-type(3) {
+    top: 430px;
+  }
+  .blank-  {
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-weight: 600;
+    margin-bottom: 45px;
+    font-size: 29px;
+  }
+  .container-contents h3 {
+    font-size: 26px;
+    margin-bottom: 17px;
+  }
+
+  .container-title {
+    margin-bottom: 250px;
+    padding-top: 100px;
+  }
+
+  .container-contents {
+    margin-bottom: 350px;
+    padding-top: 100px;
+  }
+
+  .container-contents-text {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-block-start: 13.6px;
+  }
+
+  article {
+    margin-bottom: -5px;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+ }
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
     
