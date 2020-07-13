@@ -331,7 +331,11 @@ html body {
   }
   .container-contents h3 {
     font-size: 30px;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
+  }
+
+  .container-contents .col-md-6 {
+    margin-top: 20px;
   }
 
   .container-title {
@@ -423,7 +427,7 @@ html body {
   }
 
   article {
-    margin-bottom: -5px;
+    margin-bottom: 5px;
     }
 
 }
