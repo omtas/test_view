@@ -26,9 +26,9 @@ function scroll_control(event) {
 // スクロールアイコン表示
 setTimeout("displayScroll()", 11000);
 
-setTimeout("side_scroll()", 0);
-setTimeout("no_scroll()", 0);
-setTimeout("return_scroll()", 11300);
+//setTimeout("side_scroll()", 0);
+//setTimeout("no_scroll()", 0);
+//setTimeout("return_scroll()", 11300);
 
 $(window).on('load resize', function(){
     var w = $(window).width();

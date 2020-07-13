@@ -3304,7 +3304,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	}
   }
 
-  article {
+  /* article {
 	overflow: hidden;
 	margin-bottom: 15px;
   }
@@ -3315,14 +3315,16 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	text-transform: uppercase;
   }
   
-  .example-left {
-	-webkit-animation: mymove 10s linear infinite; /* Safari 4.0 - 8.0 */
+  .example-left { */
+
+	/* Safari 4.0 - 8.0 */
+	/* -webkit-animation: mymove 10s linear infinite; 
 	white-space: nowrap;
 	animation: mymove 10s linear infinite alternate;
   }
-  
+   */
   /* Safari 4.0 - 8.0 */
-  @-webkit-keyframes mymove {
+  /* @-webkit-keyframes mymove {
 	from {
 	  left: 0;
 	}
@@ -3338,4 +3340,4 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	to {
 	  left: -140px;
 	}
-  }
+  } */
