@@ -30,6 +30,7 @@ setTimeout("side_scroll()", 0);
 setTimeout("no_scroll()", 0);
 setTimeout("return_scroll()", 11300);
 
+
 $(window).on('load resize', function(){
     var w = $(window).width();
     if (370 < w && w < 575.98) {
