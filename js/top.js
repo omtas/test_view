@@ -26,9 +26,9 @@ function scroll_control(event) {
 // スクロールアイコン表示
 setTimeout("displayScroll()", 11000);
 
-//setTimeout("side_scroll()", 0);
-//setTimeout("no_scroll()", 0);
-//setTimeout("return_scroll()", 11300);
+setTimeout("side_scroll()", 0);
+setTimeout("no_scroll()", 0);
+setTimeout("return_scroll()", 11300);
 
 $(window).on('load resize', function(){
     var w = $(window).width();
@@ -69,11 +69,11 @@ $(window).on('load resize', function(){
 
     ScrollReveal().reveal('.animateslow', { duration: '1800', viewFactor: '0.3' });
     ScrollReveal().reveal('.customer-contents', { duration: '1800', viewFactor: '0.3', reset: 'true'});
-    ScrollReveal().reveal('#customerValu1', { duration: '1800', delay: '1200', viewFactor: '0.3', reset: 'true', distance: '20px',});
-    ScrollReveal().reveal('#customerValu2', { duration: '1800', delay: '3200', viewFactor: '0.3', reset: 'true', distance: '20px'});
-    ScrollReveal().reveal('#customerValu3', { duration: '1800', delay: '5200', viewFactor: '0.3', reset: 'true', distance: '20px'});
-    ScrollReveal().reveal('#customerValu4', { duration: '1800', delay: '7200', viewFactor: '0.3', reset: 'true', distance: '20px'});
-    ScrollReveal().reveal('#customerValu5', { duration: '1800', delay: '9200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+    ScrollReveal().reveal('#customerValu1', { duration: '1500', delay: '1200', viewFactor: '0.3', reset: 'true', distance: '20px',});
+    ScrollReveal().reveal('#customerValu2', { duration: '1500', delay: '3200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+    ScrollReveal().reveal('#customerValu3', { duration: '1500', delay: '5200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+    ScrollReveal().reveal('#customerValu4', { duration: '1500', delay: '7200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+    ScrollReveal().reveal('#customerValu5', { duration: '1500', delay: '9200', viewFactor: '0.3', reset: 'true', distance: '20px'});
 
   });
   
