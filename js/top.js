@@ -30,7 +30,6 @@ setTimeout("side_scroll()", 0);
 setTimeout("no_scroll()", 0);
 setTimeout("return_scroll()", 11300);
 
-
 $(window).on('load resize', function(){
     var w = $(window).width();
     if (370 < w && w < 575.98) {
@@ -68,7 +67,7 @@ $(window).on('load resize', function(){
         ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
         ScrollReveal().reveal('.animateright', { distance: '400px', origin: 'right', viewFactor: '0.8' });
         ScrollReveal().reveal('.animateleft', { distance: '400px', origin: 'left', viewFactor: '0.8' });
-        
+
     }
 
     ScrollReveal().reveal('.animateslow', { duration: '1800', viewFactor: '0.3' });
