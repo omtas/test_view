@@ -52,8 +52,8 @@ $(window).on('load resize', function(){
         ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
         ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
         ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
-        ScrollReveal().reveal('.animateright', { distance: '10px', origin: 'right', viewFactor: '0.8' });
-        ScrollReveal().reveal('.animateleft', { distance: '10px', origin: 'left', viewFactor: '0.8' });
+        //ScrollReveal().reveal('.animateright', { distance: '10px', origin: 'right', viewFactor: '0.8' });
+        //ScrollReveal().reveal('.animateleft', { distance: '10px', origin: 'left', viewFactor: '0.8' });
         
     } else {
 
