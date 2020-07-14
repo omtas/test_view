@@ -31,8 +31,8 @@ setTimeout("return_scroll()", 11300);
 
 // スクロールスポード
 $(function () {
-    scrLength = 150;
-    scrSpeed = 50;
+    scrLength = 5000;
+    scrSpeed = 10;
     scrEasing = 'easeOutCirc';
 
     var mousewheelevent = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
@@ -55,6 +55,8 @@ $(window).on('load resize', function(){
     var w = $(window).width();
 
     if (w < 575.98) {
+
+        // スマホタブレットのアニメーション
 
         if (370 < w && w < 575.98) {
 
@@ -89,10 +91,9 @@ $(window).on('load resize', function(){
         ScrollReveal().reveal('#customerValu5', { duration: '1500', delay: '9200', viewFactor: '0.3', reset: 'true', distance: '5px'});
     
 
-    }
-    else {
+    } else {
 
-        //それ以外のときの処理
+        //それ以外のときの処理(PC)
         
         ScrollReveal().reveal('#priceCard1', { duration: '1800', viewFactor: '0.3'});
         ScrollReveal().reveal('#priceCard2', { duration: '1800', delay: '500', viewFactor: '0.3'});
