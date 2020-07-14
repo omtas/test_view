@@ -94,7 +94,7 @@ $(window).on('load resize', function(){
         ScrollReveal().reveal('#priceCard2', { duration: '1800', delay: '500', viewFactor: '0.3'});
         ScrollReveal().reveal('#priceCard3', { duration: '1800', delay: '1000', viewFactor: '0.3' });
         ScrollReveal().reveal('#container-title-pc', { duration: '2000', viewFactor: '0.1', scale: '6', delay: '20', distance: '-600px', reset: 'true'});
-        ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
+        ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true', distance: '90px' });
         ScrollReveal().reveal('.animateright', { distance: '400px', origin: 'right', viewFactor: '0.8' });
         ScrollReveal().reveal('.animateleft', { distance: '400px', origin: 'left', viewFactor: '0.8' });
         ScrollReveal().reveal('#customerValu1', { duration: '1500', delay: '1200', viewFactor: '0.3', reset: 'true', distance: '20px'});
