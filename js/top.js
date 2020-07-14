@@ -32,7 +32,7 @@ setTimeout("return_scroll()", 11300);
 // スクロールスポード
 $(function () {
     scrLength = 150;
-    scrSpeed = 100;
+    scrSpeed = 50;
     scrEasing = 'easeOutCirc';
 
     var mousewheelevent = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
@@ -53,31 +53,44 @@ $(function () {
 
 $(window).on('load resize', function(){
     var w = $(window).width();
-    if (370 < w && w < 575.98) {
 
-        //画面サイズが370以上で575.98未満のときの処理
+    if (w < 575.98) {
 
-        ScrollReveal().reveal('#priceCard1', { duration: '1800', viewFactor: '0.3'});
-        ScrollReveal().reveal('#priceCard2', { duration: '1800', viewFactor: '0.3'});
-        ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
-        ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
-        ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
-        //ScrollReveal().reveal('.animateright', { distance: '10px', origin: 'right', viewFactor: '0.8' });
-        //ScrollReveal().reveal('.animateleft', { distance: '10px', origin: 'left', viewFactor: '0.8' });
+        if (370 < w && w < 575.98) {
 
-    } else if (370 > w) {
+            //画面サイズが370以上で575.98未満のときの処理
+    
+            ScrollReveal().reveal('#priceCard1', { duration: '1800', viewFactor: '0.3'});
+            ScrollReveal().reveal('#priceCard2', { duration: '1800', viewFactor: '0.3'});
+            ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
+            ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
+            ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
+            ScrollReveal().reveal('.animateright', { distance: '7px', origin: 'right', viewFactor: '0.8' ,reset: 'true' });
+            ScrollReveal().reveal('.animateleft', { distance: '7px', origin: 'left', viewFactor: '0.8' ,reset: 'true' });
+    
+        } else if (370 > w) {
+    
+            //画面サイズが370未満のときの処理
+    
+            ScrollReveal().reveal('#priceCard1', { duration: '1800', viewFactor: '0.3'});
+            ScrollReveal().reveal('#priceCard2', { duration: '1800', viewFactor: '0.3'});
+            ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
+            ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
+            ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
+            ScrollReveal().reveal('.animateright', { distance: '7px', origin: 'right', viewFactor: '0.8' ,reset: 'true' });
+            ScrollReveal().reveal('.animateleft', { distance: '7px', origin: 'left', viewFactor: '0.8' ,reset: 'true' });
+            
+        }
 
-        //画面サイズが370未満のときの処理
+        ScrollReveal().reveal('#customerValu1', { duration: '1500', delay: '1200', viewFactor: '0.3', reset: 'true', distance: '5px'});
+        ScrollReveal().reveal('#customerValu2', { duration: '1500', delay: '3200', viewFactor: '0.3', reset: 'true', distance: '5px'});
+        ScrollReveal().reveal('#customerValu3', { duration: '1500', delay: '5200', viewFactor: '0.3', reset: 'true', distance: '5px'});
+        ScrollReveal().reveal('#customerValu4', { duration: '1500', delay: '7200', viewFactor: '0.3', reset: 'true', distance: '5px'});
+        ScrollReveal().reveal('#customerValu5', { duration: '1500', delay: '9200', viewFactor: '0.3', reset: 'true', distance: '5px'});
+    
 
-        ScrollReveal().reveal('#priceCard1', { duration: '1800', viewFactor: '0.3'});
-        ScrollReveal().reveal('#priceCard2', { duration: '1800', viewFactor: '0.3'});
-        ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
-        ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
-        ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
-        //ScrollReveal().reveal('.animateright', { distance: '10px', origin: 'right', viewFactor: '0.8' });
-        //ScrollReveal().reveal('.animateleft', { distance: '10px', origin: 'left', viewFactor: '0.8' });
-        
-    } else {
+    }
+    else {
 
         //それ以外のときの処理
         
@@ -88,16 +101,18 @@ $(window).on('load resize', function(){
         ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
         ScrollReveal().reveal('.animateright', { distance: '400px', origin: 'right', viewFactor: '0.8' });
         ScrollReveal().reveal('.animateleft', { distance: '400px', origin: 'left', viewFactor: '0.8' });
+        ScrollReveal().reveal('#customerValu1', { duration: '1500', delay: '1200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+        ScrollReveal().reveal('#customerValu2', { duration: '1500', delay: '3200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+        ScrollReveal().reveal('#customerValu3', { duration: '1500', delay: '5200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+        ScrollReveal().reveal('#customerValu4', { duration: '1500', delay: '7200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+        ScrollReveal().reveal('#customerValu5', { duration: '1500', delay: '9200', viewFactor: '0.3', reset: 'true', distance: '20px'});
+    
+
 
     }
 
     ScrollReveal().reveal('.animateslow', { duration: '1800', viewFactor: '0.3' });
     ScrollReveal().reveal('.customer-contents', { duration: '1800', viewFactor: '0.3', reset: 'true'});
-    ScrollReveal().reveal('#customerValu1', { duration: '1500', delay: '1200', viewFactor: '0.3', reset: 'true', distance: '20px',});
-    ScrollReveal().reveal('#customerValu2', { duration: '1500', delay: '3200', viewFactor: '0.3', reset: 'true', distance: '20px'});
-    ScrollReveal().reveal('#customerValu3', { duration: '1500', delay: '5200', viewFactor: '0.3', reset: 'true', distance: '20px'});
-    ScrollReveal().reveal('#customerValu4', { duration: '1500', delay: '7200', viewFactor: '0.3', reset: 'true', distance: '20px'});
-    ScrollReveal().reveal('#customerValu5', { duration: '1500', delay: '9200', viewFactor: '0.3', reset: 'true', distance: '20px'});
 
   });
   
