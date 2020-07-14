@@ -29,6 +29,28 @@ setTimeout("side_scroll()", 0);
 setTimeout("no_scroll()", 0);
 setTimeout("return_scroll()", 11300);
 
+// スクロールスポード
+$(function () {
+    scrLength = 150;
+    scrSpeed = 100;
+    scrEasing = 'easeOutCirc';
+
+    var mousewheelevent = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+    $(document).on(mousewheelevent, function (e) {
+        e.preventDefault();
+        var delta = e.originalEvent.deltaY ? -(e.originalEvent.deltaY) : e.originalEvent.wheelDelta ? e.originalEvent.wheelDelta : -(e.originalEvent.detail);
+        if (delta < 0) {
+            scrSet = $(document).scrollTop() + scrLength;
+        } else {
+            scrSet = $(document).scrollTop() - scrLength;
+        }
+        $('html,body').stop().animate({
+            scrollTop: scrSet
+        }, scrSpeed, scrEasing);
+        return false;
+    });
+});
+
 $(window).on('load resize', function(){
     var w = $(window).width();
     if (370 < w && w < 575.98) {
@@ -40,8 +62,8 @@ $(window).on('load resize', function(){
         ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
         ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
         ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
-        ScrollReveal().reveal('.animateright', { distance: '50px', origin: 'right', viewFactor: '0.8' });
-        ScrollReveal().reveal('.animateleft', { distance: '50px', origin: 'left', viewFactor: '0.8' });
+        ScrollReveal().reveal('.animateright', { distance: '10px', origin: 'right', viewFactor: '0.8' });
+        ScrollReveal().reveal('.animateleft', { distance: '10px', origin: 'left', viewFactor: '0.8' });
 
     } else if (370 > w) {
 
@@ -52,8 +74,8 @@ $(window).on('load resize', function(){
         ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
         ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
         ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
-        //ScrollReveal().reveal('.animateright', { distance: '10px', origin: 'right', viewFactor: '0.8' });
-        //ScrollReveal().reveal('.animateleft', { distance: '10px', origin: 'left', viewFactor: '0.8' });
+        ScrollReveal().reveal('.animateright', { distance: '10px', origin: 'right', viewFactor: '0.8' });
+        ScrollReveal().reveal('.animateleft', { distance: '10px', origin: 'left', viewFactor: '0.8' });
         
     } else {
 
