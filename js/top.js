@@ -25,31 +25,30 @@ function scroll_control(event) {
 // スクロールアイコン表示
 setTimeout("displayScroll()", 11000);
 
-setTimeout("side_scroll()", 0);
-setTimeout("no_scroll()", 0);
+//setTimeout("no_scroll()", 0);
 setTimeout("return_scroll()", 11300);
 
 // スクロールスポード
-// $(function () {
-//     scrLength = 5000;
-//     scrSpeed = 10;
-//     scrEasing = 'easeOutCirc';
+$(function () {
+    scrLength = 5000;
+    scrSpeed = 100;
+    scrEasing = 'easeOutCirc';
 
-//     var mousewheelevent = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
-//     $(document).on(mousewheelevent, function (e) {
-//         e.preventDefault();
-//         var delta = e.originalEvent.deltaY ? -(e.originalEvent.deltaY) : e.originalEvent.wheelDelta ? e.originalEvent.wheelDelta : -(e.originalEvent.detail);
-//         if (delta < 0) {
-//             scrSet = $(document).scrollTop() + scrLength;
-//         } else {
-//             scrSet = $(document).scrollTop() - scrLength;
-//         }
-//         $('html,body').stop().animate({
-//             scrollTop: scrSet
-//         }, scrSpeed, scrEasing);
-//         return false;
-//     });
-// });
+    var mousewheelevent = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+    $(document).on(mousewheelevent, function (e) {
+        e.preventDefault();
+        var delta = e.originalEvent.deltaY ? -(e.originalEvent.deltaY) : e.originalEvent.wheelDelta ? e.originalEvent.wheelDelta : -(e.originalEvent.detail);
+        if (delta < 0) {
+            scrSet = $(document).scrollTop() + scrLength;
+        } else {
+            scrSet = $(document).scrollTop() - scrLength;
+        }
+        $('html,body').stop().animate({
+            scrollTop: scrSet
+        }, scrSpeed, scrEasing);
+        return false;
+    });
+});
 
 $(window).on('load resize', function(){
     var w = $(window).width();
@@ -62,28 +61,24 @@ $(window).on('load resize', function(){
 
             //画面サイズが370以上で575.98未満のときの処理
     
-            ScrollReveal().reveal('#priceCard1', { duration: '1800', viewFactor: '0.3'});
-            ScrollReveal().reveal('#priceCard2', { duration: '1800', viewFactor: '0.3'});
-            ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
-            ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
-            ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
-            ScrollReveal().reveal('.animateright', { distance: '7px', origin: 'right', viewFactor: '0.8' ,reset: 'true' });
-            ScrollReveal().reveal('.animateleft', { distance: '7px', origin: 'left', viewFactor: '0.8' ,reset: 'true' });
+            ScrollReveal().reveal('#priceCard1', { duration: '1200', viewFactor: '0.3', origin: 'bottom', distance: '50px'});
+            ScrollReveal().reveal('#priceCard2', { duration: '1200', viewFactor: '0.3', origin: 'bottom', distance: '50px'});
+            ScrollReveal().reveal('#priceCard3', { duration: '1200', viewFactor: '0.3', origin: 'bottom', distance: '50px'});
     
         } else if (370 > w) {
     
             //画面サイズが370未満のときの処理
     
-            ScrollReveal().reveal('#priceCard1', { duration: '1800', viewFactor: '0.3'});
-            ScrollReveal().reveal('#priceCard2', { duration: '1800', viewFactor: '0.3'});
-            ScrollReveal().reveal('#priceCard3', { duration: '1800', viewFactor: '0.3' });
-            ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
-            ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true' });
-            ScrollReveal().reveal('.animateright', { distance: '7px', origin: 'right', viewFactor: '0.8' ,reset: 'true' });
-            ScrollReveal().reveal('.animateleft', { distance: '7px', origin: 'left', viewFactor: '0.8' ,reset: 'true' });
+            ScrollReveal().reveal('#priceCard1', { duration: '1200', viewFactor: '0.3', origin: 'bottom', distance: '50px'});
+            ScrollReveal().reveal('#priceCard2', { duration: '1200', viewFactor: '0.3', origin: 'bottom', distance: '50px'});
+            ScrollReveal().reveal('#priceCard3', { duration: '1200', viewFactor: '0.3', origin: 'bottom', distance: '50px'});
             
         }
 
+        ScrollReveal().reveal('#container-title-sm', { duration: '1480', viewFactor: '0.4', origin: 'bottom', distance: '90px' });
+        ScrollReveal().reveal('.container-contents', { duration: '1480', viewFactor: '0.4', reset: 'true', distance: '20px'  });
+        ScrollReveal().reveal('.animateright', { distance: '7px', origin: 'right', viewFactor: '0.8' ,reset: 'true' });
+        ScrollReveal().reveal('.animateleft', { distance: '7px', origin: 'left', viewFactor: '0.8' ,reset: 'true' });
         ScrollReveal().reveal('#customerValu1', { duration: '1500', delay: '1200', viewFactor: '0.3', reset: 'true', distance: '5px'});
         ScrollReveal().reveal('#customerValu2', { duration: '1500', delay: '3200', viewFactor: '0.3', reset: 'true', distance: '5px'});
         ScrollReveal().reveal('#customerValu3', { duration: '1500', delay: '5200', viewFactor: '0.3', reset: 'true', distance: '5px'});
